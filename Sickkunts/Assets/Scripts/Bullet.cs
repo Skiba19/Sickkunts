@@ -18,7 +18,6 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        Debug.Log(target.name);
         Vector3 dir=target.position-transform.position;
         float distanceThisFrame=speed*Time.deltaTime;
         if(dir.magnitude<=distanceThisFrame)
