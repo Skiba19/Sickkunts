@@ -15,7 +15,7 @@ public class BuildManager : MonoBehaviour
         instance=this;
     }
     public GameObject standardTurretPrefab;
-    public GameObject anotherTurretPrefab;
+    public GameObject missleTurretPrefab;
     private TurretBlueprint turretToBuild;
     public bool CanBuild{get{return turretToBuild!=null;}}
     public void BuildTurretOn(Node node)
@@ -29,7 +29,7 @@ public class BuildManager : MonoBehaviour
         GameObject turret=(GameObject) Instantiate(turretToBuild.prefab, node.getBuildPosition(), Quaternion.identity);
         node.turret=turret;
     }
-    public void SelectTurreToBuild(TurretBlueprint turret)
+    public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild=turret;
     }
