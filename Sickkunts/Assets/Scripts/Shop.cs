@@ -13,12 +13,12 @@ public class Shop : MonoBehaviour
     }
     public void SelectStandardTurret()
     {
-        Debug.Log("Standard Turret Purchased");
+        Debug.Log("Standard Turret Selected");
         buildManager.SelectTurretToBuild(standartTurret);
     }
     public void SelectMissleTurret()
     {
-        Debug.Log("Missle Turret Purchased");
+        Debug.Log("Missle Turret Selected");
         buildManager.SelectTurretToBuild(missleTurret);
     }
     public void SelectAnotherTurret()

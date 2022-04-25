@@ -48,7 +48,15 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        rend.material.color=hoverColor;
+        if(buildManager.HasMoney)
+        {
+            rend.material.color=hoverColor;
+        }
+        else
+        {
+            rend.material.color=Color.red;
+        }
+        
     }
     void OnMouseExit()
     {
