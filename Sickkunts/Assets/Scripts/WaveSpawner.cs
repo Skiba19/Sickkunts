@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
     public Transform enemyPrefab;
     public Transform spawnPoint;
     public float timeBeetweenWaves=5f;
+    public Text waveCountdownText;
     private float countdown=2f;
     private int waveIndex=0;
     void Update()
@@ -17,6 +19,9 @@ public class WaveSpawner : MonoBehaviour
             countdown=timeBeetweenWaves;
         }
         countdown-=Time.deltaTime;
+        countdown=Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        
+        waveCountdownText.text=string.Format("{0:00.00}",countdown);
     }
     IEnumerator SpawnWave()
     {
