@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float startSpeed=5f;
+    public float startSpeed=2f;
     [HideInInspector]
     public float speed;
     public float heath=100f;
