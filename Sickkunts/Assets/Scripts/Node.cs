@@ -34,6 +34,7 @@ public class Node : MonoBehaviour
         }
         if(turret!=null)
         {
+            buildManager.SelectNode(this);
             return;
         }
         buildManager.BuildTurretOn(this);

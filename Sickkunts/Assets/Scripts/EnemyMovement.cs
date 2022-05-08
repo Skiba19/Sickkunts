@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     private Enemy enemy;
     void Start()
     {
-        enemy =GetComponent<Enemy>();
+        enemy=GetComponent<Enemy>();
         target=Waypoints.points[0];
     }
     void Update()
