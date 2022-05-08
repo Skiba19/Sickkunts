@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private bool doMovment=true;
     public float panSpeed=20f;
     public float scrollSpeed=2f;
     public float minY=2.5f;
@@ -16,14 +15,6 @@ public class CameraController : MonoBehaviour
         if(GameManager.GameIsOver)
         {
             this.enabled=false;
-            return;
-        }
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            doMovment=!doMovment;
-        }
-        if(!doMovment)
-        {
             return;
         }
         if(Input.GetKey("d"))
