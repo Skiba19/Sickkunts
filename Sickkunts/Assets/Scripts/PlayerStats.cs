@@ -8,9 +8,11 @@ public class PlayerStats : MonoBehaviour
     public int startMoney=400;
     public static int Lives;
     public int startLives=20;
+    public static int Points;
     void Start()
     {
         Money=startMoney;
         Lives=startLives;
+        Points=0;
     }
 }

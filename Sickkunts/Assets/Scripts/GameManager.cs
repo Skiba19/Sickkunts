@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool gameEnded=false;
+    public static bool GameIsOver;
+    public GameObject gameOverUI;
+    void Start()
+    {
+        GameIsOver=false;
+    }
     void Update()
     {
-        if(gameEnded==true)
+        if(Input.GetKeyDown("f"))
+        {
+            EndGame();
+        }
+        if(GameIsOver==true)
         {
             return;
         }
@@ -18,6 +27,7 @@ public class GameManager : MonoBehaviour
     }
     private void EndGame()
     {
-        gameEnded=true;
+        GameIsOver=true;
+        gameOverUI.SetActive(true);
     }
 }
