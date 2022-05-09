@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     private Transform target;
     private int wavepointIndex=0;
     private Enemy enemy;
+    public Transform partToRotate;
     void Start()
     {
         enemy=GetComponent<Enemy>();
@@ -18,6 +19,9 @@ public class EnemyMovement : MonoBehaviour
         
         Vector3 dir=target.position-transform.position;
         transform.Translate(dir.normalized*enemy.speed*Time.deltaTime,Space.World);
+        Quaternion lookRotation=Quaternion.LookRotation(dir);
+        Vector3 rotation=Quaternion.Lerp(partToRotate.rotation, lookRotation, 0.1f).eulerAngles;
+        partToRotate.rotation=Quaternion.Euler(0f,rotation.y,0f); 
         if(Vector3.Distance(transform.position, target.position)<=0.1f)
         {
             GetNextWaypoint();

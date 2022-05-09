@@ -69,6 +69,7 @@ public class WaveSpawner : MonoBehaviour
     }
     IEnumerator SpawnFastEnemy(GameObject enemy, int count)
     {
+        spawnPoint.position.Set(1.2f,0.25f,1.2f);
         for(int i=0;i<count;i++)
         {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
