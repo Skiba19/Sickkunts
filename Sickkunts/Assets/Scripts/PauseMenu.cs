@@ -24,15 +24,18 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale=1f;
         }
+        
     }
     public void Retry()
     {
         Toggle();
+        WaveSpawner.EnemiesAlive=0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Menu()
     {
         Toggle();
+        WaveSpawner.EnemiesAlive=0;
         SceneManager.LoadScene("MainMenu");
     }
 }
