@@ -1,6 +1,6 @@
 # 🕹 Sickkunts 
  
-<h3>🤓 Általános információ:</h3>
+<h3>Általános információ:</h3>
 <p>A projektünk egy 3D Tower Defense játék volt.</p>
 
 # 💻 Technológiák:
